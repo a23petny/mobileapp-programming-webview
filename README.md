@@ -7,6 +7,9 @@ _Du kan ta bort all text som finns sedan tidigare_.
 
 ## Följande grundsyn gäller dugga-svar:
 
+Write a short report where you explain the things that you have done. Include one (1) screenshot showing your internal web page and one (1) screenshot showing your external web page. Hint: This is a function built into the android virtual device. Make sure you include all other parts that are required in the report as described in the assignment requirements.
+
+
 - Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
 - Svaret skall ha minst en snutt programkod.
 - Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
