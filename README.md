@@ -31,7 +31,24 @@ To display web pages, two methods were implemented:
 showExternalWebPage() //: Loads an external URL.
 showInternalWebPage() //: Loads a local HTML page from the Android assets folder.
 ```
-
+- Menu options were added to the application’s toolbar to allow users to select between viewing an external or an internal web page. 
+```
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        ...
+        if (id == R.id.action_external_web) {
+            ...
+            showExternalWebPage();
+            ...
+        }
+        if (id == R.id.action_internal_web) {
+            ...
+            showInternalWebPage();
+            ...
+        }
+        ...
+    }
+```
 Bilder läggs i samma mapp som markdown-filen.
 
 ![](android2.png)
