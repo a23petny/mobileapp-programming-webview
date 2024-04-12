@@ -33,7 +33,7 @@ function errorCallback(error) {
     }
 }
 ```
-
+h
 Bilder läggs i samma mapp som markdown-filen.
 
 ![](android2.png)
