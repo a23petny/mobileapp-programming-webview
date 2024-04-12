@@ -9,31 +9,29 @@ _Du kan ta bort all text som finns sedan tidigare_.
 
 Write a short report where you explain the things that you have done. Include one (1) screenshot showing your internal web page and one (1) screenshot showing your external web page. Hint: This is a function built into the android virtual device. Make sure you include all other parts that are required in the report as described in the assignment requirements.
 
-
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
-
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
-
+- Renaming the Application
 ```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
+<resources>
+    <string name="app_name">AlphaDelta</string> 
+    ...
+</resources>
 ```
-h
+- Enabling Internet Access. Internet access was enabled by modifying the AndroidManifest.xml file.
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
+- Creating a WebView Element. The existing TextView element in the activity_main.xml layout file was replaced with a WebView element. This change allows the application to display web pages directly in the app interface.
+- Instantiating the WebView. A private member variable named myWebView of type WebView was created. This variable was instantiated in the onCreate() method of the application’s main activity using the findViewById()
+```
+myWebView = findViewById(R.id.my_webview);
+```
+- Managing Web Content
+To display web pages, two methods were implemented:
+```
+showExternalWebPage() //: Loads an external URL.
+showInternalWebPage() //: Loads a local HTML page from the Android assets folder.
+```
+
 Bilder läggs i samma mapp som markdown-filen.
 
 ![](android2.png)
